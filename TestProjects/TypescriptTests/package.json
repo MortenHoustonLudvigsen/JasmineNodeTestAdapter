@@ -1,5 +1,8 @@
-﻿{
-    "name": "TypescriptTests",
-    "version": "0.0.0",
-    "private": true
+{
+  "name": "TypescriptTests",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "jasmine": "^2.2.1"
+  }
 }
