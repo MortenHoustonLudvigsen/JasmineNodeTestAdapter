@@ -130,6 +130,9 @@
     <Content Include="Grunt\TestVS.js">
       <DependentUpon>TestVS.ts</DependentUpon>
     </Content>
+    <Content Include="JasmineTestServer\JasmineLogger.js">
+      <DependentUpon>JasmineLogger.ts</DependentUpon>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="source.extension.vsixmanifest" />
     <Content Include="TestServer\Extensions.js">
@@ -180,6 +183,7 @@
     <TypeScriptCompile Include="Grunt\GetNodeModules.ts" />
     <TypeScriptCompile Include="Grunt\Index.ts" />
     <TypeScriptCompile Include="Grunt\TestVS.ts" />
+    <TypeScriptCompile Include="JasmineTestServer\JasmineLogger.ts" />
     <TypeScriptCompile Include="TestServer\Extensions.ts" />
     <TypeScriptCompile Include="TestServer\FreePort.ts" />
     <TypeScriptCompile Include="TestServer\JsonClient.ts" />
@@ -194,8 +198,10 @@
     <TypeScriptCompile Include="TestServer\TestReporter.ts" />
     <TypeScriptCompile Include="TestServer\TestServer.ts" />
     <TypeScriptCompile Include="TestServer\TextFile.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
     <TypeScriptCompile Include="typings\extend\extend.d.ts" />
     <TypeScriptCompile Include="typings\jasmine\jasmine.d.ts" />
+    <TypeScriptCompile Include="typings\log4js\log4js.d.ts" />
     <TypeScriptCompile Include="typings\node\node.d.ts" />
     <TypeScriptCompile Include="typings\q\Q.d.ts" />
     <TypeScriptCompile Include="typings\semver\semver.d.ts" />
@@ -303,6 +309,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="web.config" />
+    <Content Include="JasmineTestServer\JasmineLogger.js.map">
+      <DependentUpon>JasmineLogger.ts</DependentUpon>
+    </Content>
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -310,5 +319,6 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

@@ -4,3 +4,5 @@
 /// <reference path="q/Q.d.ts" />
 /// <reference path="extend/extend.d.ts" />
 /// <reference path="semver/semver.d.ts" />
+/// <reference path="log4js/log4js.d.ts" />
+/// <reference path="express/express.d.ts" />
