@@ -130,8 +130,20 @@
     <Content Include="Grunt\TestVS.js">
       <DependentUpon>TestVS.ts</DependentUpon>
     </Content>
+    <Content Include="JasmineTestServer\Constants.js">
+      <DependentUpon>Constants.ts</DependentUpon>
+    </Content>
     <Content Include="JasmineTestServer\JasmineLogger.js">
       <DependentUpon>JasmineLogger.ts</DependentUpon>
+    </Content>
+    <Content Include="JasmineTestServer\JasmineRunner.js">
+      <DependentUpon>JasmineRunner.ts</DependentUpon>
+    </Content>
+    <Content Include="JasmineTestServer\Settings.js">
+      <DependentUpon>Settings.ts</DependentUpon>
+    </Content>
+    <Content Include="JasmineTestServer\Utils.js">
+      <DependentUpon>Utils.ts</DependentUpon>
     </Content>
     <Content Include="packages.config" />
     <Content Include="source.extension.vsixmanifest" />
@@ -183,7 +195,11 @@
     <TypeScriptCompile Include="Grunt\GetNodeModules.ts" />
     <TypeScriptCompile Include="Grunt\Index.ts" />
     <TypeScriptCompile Include="Grunt\TestVS.ts" />
+    <TypeScriptCompile Include="JasmineTestServer\Constants.ts" />
     <TypeScriptCompile Include="JasmineTestServer\JasmineLogger.ts" />
+    <TypeScriptCompile Include="JasmineTestServer\JasmineRunner.ts" />
+    <TypeScriptCompile Include="JasmineTestServer\Settings.ts" />
+    <TypeScriptCompile Include="JasmineTestServer\Utils.ts" />
     <TypeScriptCompile Include="TestServer\Extensions.ts" />
     <TypeScriptCompile Include="TestServer\FreePort.ts" />
     <TypeScriptCompile Include="TestServer\JsonClient.ts" />
@@ -200,8 +216,10 @@
     <TypeScriptCompile Include="TestServer\TextFile.ts" />
     <TypeScriptCompile Include="typings\express\express.d.ts" />
     <TypeScriptCompile Include="typings\extend\extend.d.ts" />
+    <TypeScriptCompile Include="typings\glob\glob.d.ts" />
     <TypeScriptCompile Include="typings\jasmine\jasmine.d.ts" />
     <TypeScriptCompile Include="typings\log4js\log4js.d.ts" />
+    <TypeScriptCompile Include="typings\minimatch\minimatch.d.ts" />
     <TypeScriptCompile Include="typings\node\node.d.ts" />
     <TypeScriptCompile Include="typings\q\Q.d.ts" />
     <TypeScriptCompile Include="typings\semver\semver.d.ts" />
@@ -311,6 +329,18 @@
     <Content Include="web.config" />
     <Content Include="JasmineTestServer\JasmineLogger.js.map">
       <DependentUpon>JasmineLogger.ts</DependentUpon>
+    </Content>
+    <Content Include="JasmineTestServer\Settings.js.map">
+      <DependentUpon>Settings.ts</DependentUpon>
+    </Content>
+    <Content Include="JasmineTestServer\Constants.js.map">
+      <DependentUpon>Constants.ts</DependentUpon>
+    </Content>
+    <Content Include="JasmineTestServer\Utils.js.map">
+      <DependentUpon>Utils.ts</DependentUpon>
+    </Content>
+    <Content Include="JasmineTestServer\JasmineRunner.js.map">
+      <DependentUpon>JasmineRunner.ts</DependentUpon>
     </Content>
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>

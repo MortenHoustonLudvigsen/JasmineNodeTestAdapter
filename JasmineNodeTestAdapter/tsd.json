@@ -28,6 +28,12 @@
     },
     "express/express.d.ts": {
       "commit": "016a970de58cc46310c75bd8f0c10642c4f44609"
+    },
+    "glob/glob.d.ts": {
+      "commit": "55ffe0e1ee1595009e9e230a46f719c7a09e2e8d"
+    },
+    "minimatch/minimatch.d.ts": {
+      "commit": "55ffe0e1ee1595009e9e230a46f719c7a09e2e8d"
     }
   }
 }

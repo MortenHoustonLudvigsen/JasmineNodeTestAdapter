@@ -79,6 +79,12 @@
       <DependentUpon>AdderSpec.ts</DependentUpon>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Start.cmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JasmineNodeTestAdapter.json" />
+  </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
   </PropertyGroup>

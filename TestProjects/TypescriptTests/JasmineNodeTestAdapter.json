@@ -1,0 +1,5 @@
+﻿{
+    "$schema": "http://MortenHoustonLudvigsen.github.io/JasmineNodeTestAdapter/JasmineNodeTestAdapter.schema.json",
+    "Specs": [ "specs/**/*[Ss]pec.js" ],
+    "Watch": [ "src/**/*.js" ]
+}

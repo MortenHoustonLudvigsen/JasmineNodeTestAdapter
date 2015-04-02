@@ -6,3 +6,5 @@
 /// <reference path="semver/semver.d.ts" />
 /// <reference path="log4js/log4js.d.ts" />
 /// <reference path="express/express.d.ts" />
+/// <reference path="glob/glob.d.ts" />
+/// <reference path="minimatch/minimatch.d.ts" />
