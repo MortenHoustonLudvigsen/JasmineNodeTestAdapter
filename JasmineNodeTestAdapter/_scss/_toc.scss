@@ -1,0 +1,45 @@
+.clickable-header {
+  cursor:pointer;
+}
+
+.clickable-header:hover {
+  text-decoration:underline;
+}
+
+.top-level-header {
+  display:inline-block;
+}
+
+.back-to-top {
+  margin-left:5px;
+  cursor:pointer;
+}
+
+#toc ul {
+  list-style-type: none;
+}
+
+#toc > ul {
+  padding-left: 2px;
+}
+
+.icon-arrow-up {
+    display:inline-block;
+	width: 0; 
+	height: 0; 
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 12px solid gray;
+    margin-bottom: 3px;
+    margin-left: -16px;
+    margin-right: 4px;
+}
+
+.icon-arrow-up.level-1 {
+    margin-bottom: 3px;
+}
+
+.icon-arrow-up.level-2 {
+    margin-bottom: 1px;
+}
+
