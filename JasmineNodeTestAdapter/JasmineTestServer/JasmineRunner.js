@@ -1,12 +1,18 @@
 var glob = require('glob');
+var TestNetServer = require('../TestServer/TestNetServer');
 var JasmineLogger = require('./JasmineLogger');
 var JasmineInstumentation = require('./JasmineInstumentation');
+var JasmineReporter = require('./JasmineReporter');
 var Utils = require('./Utils');
 var Jasmine = require('jasmine');
-var argv = require('yargs').usage('Usage: $0 --settings [settings file]').demand(['settings']).argv;
 var logger = JasmineLogger('Jasmine Runner');
+var argv = require('yargs').usage('Usage: node JasmineRunner.js [options]').demand(['settings', 'port']).describe('name', 'The name of the test container').describe('port', 'The test server port').describe('settings', 'The settings file (JasmineNodeTestAdapter.json)').argv;
+var name = argv.name || '';
+var port = argv.port;
 // Load settings
 var settings = Utils.loadSettings(argv.settings);
+// Create a TestNetServer, that can report test results to the test server
+var server = new TestNetServer(name, port);
 // Create an Jasmine instance
 var jasmine = new Jasmine({ projectBaseDir: settings.BasePath });
 // Wrap jasmine functions to get source information
@@ -23,6 +29,14 @@ settings.Specs.forEach(function (pattern) {
         jasmine.addSpecFile(f);
     });
 });
-// Run the jasmine specs
-jasmine.execute();
+var reporter = new JasmineReporter(server, settings.BasePath);
+jasmine.addReporter(reporter);
+try {
+    // Run the jasmine specs
+    jasmine.execute();
+}
+catch (e) {
+    // If there is an unhandled error report it as a failed test
+    reporter.jasmineFailed(e);
+}
 //# sourceMappingURL=JasmineRunner.js.map
