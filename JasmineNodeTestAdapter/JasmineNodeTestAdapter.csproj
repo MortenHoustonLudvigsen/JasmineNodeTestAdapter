@@ -358,6 +358,7 @@
   <ItemGroup>
     <Compile Include="Globals.cs" />
     <Compile Include="TestAdapter\JasmineLogger.cs" />
+    <Compile Include="TestAdapter\JasmineServer.cs" />
     <Compile Include="TestAdapter\Settings.cs" />
   </ItemGroup>
   <ItemGroup />
