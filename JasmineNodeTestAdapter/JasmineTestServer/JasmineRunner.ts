@@ -1,6 +1,7 @@
 ﻿import path = require('path');
 import glob = require('glob');
 import JasmineLogger = require('./JasmineLogger');
+import JasmineInstumentation = require('./JasmineInstumentation');
 import Utils = require('./Utils');
 var Jasmine = require('jasmine');
 
@@ -16,6 +17,9 @@ var settings = Utils.loadSettings(argv.settings);
 
 // Create an Jasmine instance
 var jasmine = new Jasmine({ projectBaseDir: settings.BasePath });
+
+// Wrap jasmine functions to get source information
+JasmineInstumentation.wrapFunctions(jasmine.env);
 
 // Add helpers to jasmine
 settings.Helpers.forEach(pattern => {

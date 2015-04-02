@@ -1,5 +1,6 @@
 var glob = require('glob');
 var JasmineLogger = require('./JasmineLogger');
+var JasmineInstumentation = require('./JasmineInstumentation');
 var Utils = require('./Utils');
 var Jasmine = require('jasmine');
 var argv = require('yargs').usage('Usage: $0 --settings [settings file]').demand(['settings']).argv;
@@ -8,6 +9,8 @@ var logger = JasmineLogger('Jasmine Runner');
 var settings = Utils.loadSettings(argv.settings);
 // Create an Jasmine instance
 var jasmine = new Jasmine({ projectBaseDir: settings.BasePath });
+// Wrap jasmine functions to get source information
+JasmineInstumentation.wrapFunctions(jasmine.env);
 // Add helpers to jasmine
 settings.Helpers.forEach(function (pattern) {
     glob.sync(pattern, { nodir: true }).forEach(function (f) {

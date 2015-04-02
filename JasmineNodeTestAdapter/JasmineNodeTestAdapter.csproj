@@ -133,6 +133,9 @@
     <Content Include="JasmineTestServer\Constants.js">
       <DependentUpon>Constants.ts</DependentUpon>
     </Content>
+    <Content Include="JasmineTestServer\JasmineInstumentation.js">
+      <DependentUpon>JasmineInstumentation.ts</DependentUpon>
+    </Content>
     <Content Include="JasmineTestServer\JasmineLogger.js">
       <DependentUpon>JasmineLogger.ts</DependentUpon>
     </Content>
@@ -196,6 +199,7 @@
     <TypeScriptCompile Include="Grunt\Index.ts" />
     <TypeScriptCompile Include="Grunt\TestVS.ts" />
     <TypeScriptCompile Include="JasmineTestServer\Constants.ts" />
+    <TypeScriptCompile Include="JasmineTestServer\JasmineInstumentation.ts" />
     <TypeScriptCompile Include="JasmineTestServer\JasmineLogger.ts" />
     <TypeScriptCompile Include="JasmineTestServer\JasmineRunner.ts" />
     <TypeScriptCompile Include="JasmineTestServer\Settings.ts" />
@@ -341,6 +345,9 @@
     </Content>
     <Content Include="JasmineTestServer\JasmineRunner.js.map">
       <DependentUpon>JasmineRunner.ts</DependentUpon>
+    </Content>
+    <Content Include="JasmineTestServer\JasmineInstumentation.js.map">
+      <DependentUpon>JasmineInstumentation.ts</DependentUpon>
     </Content>
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
