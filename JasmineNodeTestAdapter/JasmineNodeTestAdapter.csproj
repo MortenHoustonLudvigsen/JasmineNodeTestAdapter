@@ -362,6 +362,7 @@
     <Compile Include="TestAdapter\JasmineServerTestLogger.cs" />
     <Compile Include="TestAdapter\JasmineTestAdapterInfo.cs" />
     <Compile Include="TestAdapter\JasmineTestContainerSource.cs" />
+    <Compile Include="TestAdapter\JasmineTestRunner.cs" />
     <Compile Include="TestAdapter\JasmineTestSettings.cs" />
     <Compile Include="TestAdapter\JasmineTestSettingsProvider.cs" />
     <Compile Include="TestAdapter\Settings.cs" />
