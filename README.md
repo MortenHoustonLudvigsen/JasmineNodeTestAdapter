@@ -31,7 +31,7 @@ This test adapter runs tests in [Node.js](https://nodejs.org/). If you need to r
 
 # Installation
 
-Download and install from the Visual Studio Gallery here: [Jasmine Node Test Adapter](http://visualstudiogallery.msdn.microsoft.com/...)
+Download and install from the Visual Studio Gallery here: [Jasmine Node Test Adapter](https://visualstudiogallery.msdn.microsoft.com/2b7df052-88e3-4d27-831f-ca400246af28)
 
 # Configuration
 
