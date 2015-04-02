@@ -1,6 +1,6 @@
 {
   "name": "JasmineNodeTestAdapter",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "devDependencies": {
     "flatten-packages": "^0.1.4",
