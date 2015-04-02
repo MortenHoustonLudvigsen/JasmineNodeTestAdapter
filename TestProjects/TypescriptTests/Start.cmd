@@ -6,7 +6,7 @@ set CurrentDir=%CD%
 cd %~dp0..\..
 set SolutionDir=%CD%
 set TestProjectsDir=%SolutionDir%\TestProjects
-set JasmineRunner=%SolutionDir%\JasmineNodeTestAdapter\JasmineTestServer\JasmineRunner.js
+set TestServer=%SolutionDir%\JasmineNodeTestAdapter\JasmineTestServer\Start.js
 
 :: Set NODE_PATH to simulate starting node from %CurrentDir%
 set NODE_PATH=%CurrentDir%\node_modules
@@ -17,4 +17,4 @@ set NODE_PATH=%NODE_PATH%;%SolutionDir%\node_modules;%AppData%\Roaming\npm\node_
 set NODE_PATH=%NODE_PATH%;%AppData%\Roaming\npm\node_modules
 
 :: Run jasmine specs using JasmineRunner.js
-node "%JasmineRunner%" --settings "%CurrentDir%\JasmineNodeTestAdapter.json"
+node "%TestServer%" --settings "%CurrentDir%\JasmineNodeTestAdapter.json" --singleRun

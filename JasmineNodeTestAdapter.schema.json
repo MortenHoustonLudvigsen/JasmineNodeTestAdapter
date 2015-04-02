@@ -31,6 +31,10 @@
             "type": "array",
             "items": { "type": "string" }
         },
+        "BatchInterval": {
+            "description": "When the test adapter is watching files for changes, it will wait `BatchInterval` ms before running tests. Default value is 250.",
+            "type": "number"
+        },
         "Traits": {
             "description": "Traits to attach to each test.",
             "type": "array",

@@ -5,6 +5,6 @@ export var defaultSettings = <Settings>{
     Helpers: [],
     Specs: [],
     Watch: [],
-    Traits: [],
-    Extensions: undefined
+    BatchInterval: 250,
+    Traits: []
 }; 

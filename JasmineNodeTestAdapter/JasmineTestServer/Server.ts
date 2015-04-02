@@ -24,7 +24,6 @@ class Server extends TestServer {
         }
 
         this.once('listening',() => this.logger.info('Started - port:', this.address.port));
-        this.start();
     }
 
     logger = JasmineLogger('Jasmine Server');

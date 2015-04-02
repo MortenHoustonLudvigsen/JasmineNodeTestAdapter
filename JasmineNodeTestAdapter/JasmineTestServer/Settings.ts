@@ -5,8 +5,9 @@ interface Settings {
     Helpers: string[];
     Specs: string[];
     Watch: string[];
+    BatchInterval: number;
     Traits: (string|Specs.Trait)[];
-    Extensions: string;
+    Extensions?: string;
 }
 
 export = Settings; 

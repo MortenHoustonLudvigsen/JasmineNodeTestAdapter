@@ -26,7 +26,6 @@ var Server = (function (_super) {
             }
         }
         this.once('listening', function () { return _this.logger.info('Started - port:', _this.address.port); });
-        this.start();
     }
     Server.prototype.onError = function (error, connection) {
         this.logger.error(error);

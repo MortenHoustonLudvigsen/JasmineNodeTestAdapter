@@ -36,7 +36,12 @@ class Runner extends events.EventEmitter {
         clearTimeout(this.scheduleTimeout);
     }
 
-    private run() {
+    run() {
+        if (this.isRunning) {
+            this.schedule();
+            return;
+        }
+
         this.isRunning = true;
         clearTimeout(this.scheduleTimeout);
 

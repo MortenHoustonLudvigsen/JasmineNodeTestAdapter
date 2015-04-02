@@ -43,6 +43,10 @@ var Runner = (function (_super) {
     };
     Runner.prototype.run = function () {
         var _this = this;
+        if (this.isRunning) {
+            this.schedule();
+            return;
+        }
         this.isRunning = true;
         clearTimeout(this.scheduleTimeout);
         var options = { stdio: 'inherit' };
