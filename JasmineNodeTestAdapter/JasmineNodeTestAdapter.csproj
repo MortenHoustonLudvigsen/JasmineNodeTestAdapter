@@ -145,6 +145,9 @@
     <Content Include="JasmineTestServer\JasmineRunner.js">
       <DependentUpon>JasmineRunner.ts</DependentUpon>
     </Content>
+    <Content Include="JasmineTestServer\Runner.js">
+      <DependentUpon>Runner.ts</DependentUpon>
+    </Content>
     <Content Include="JasmineTestServer\Server.js">
       <DependentUpon>Server.ts</DependentUpon>
     </Content>
@@ -170,6 +173,7 @@
     <TypeScriptCompile Include="JasmineTestServer\JasmineLogger.ts" />
     <TypeScriptCompile Include="JasmineTestServer\JasmineReporter.ts" />
     <TypeScriptCompile Include="JasmineTestServer\JasmineRunner.ts" />
+    <TypeScriptCompile Include="JasmineTestServer\Runner.ts" />
     <TypeScriptCompile Include="JasmineTestServer\Server.ts" />
     <TypeScriptCompile Include="JasmineTestServer\Settings.ts" />
     <TypeScriptCompile Include="JasmineTestServer\Timer.ts" />
@@ -333,6 +337,9 @@
     </Content>
     <Content Include="JasmineTestServer\Server.js.map">
       <DependentUpon>Server.ts</DependentUpon>
+    </Content>
+    <Content Include="JasmineTestServer\Runner.js.map">
+      <DependentUpon>Runner.ts</DependentUpon>
     </Content>
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
