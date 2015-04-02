@@ -26,29 +26,27 @@ var Runner = (function (_super) {
         this.batchInterval = batchInterval;
         this.server = server;
         this.isRunning = false;
-        this.isScheduled = false;
     }
     Runner.prototype.schedule = function () {
         var _this = this;
         if (!this.isRunning) {
-            this.run();
+            clearTimeout(this.scheduleTimeout);
+            this.scheduleTimeout = setTimeout(function () { return _this.run(); }, this.batchInterval);
         }
         else {
-            this.isScheduled = true;
             clearTimeout(this.scheduleTimeout);
             this.scheduleTimeout = setTimeout(function () { return _this.schedule(); }, this.batchInterval);
         }
     };
     Runner.prototype.stop = function () {
-        this.isScheduled = false;
         clearTimeout(this.scheduleTimeout);
     };
     Runner.prototype.run = function () {
         var _this = this;
         this.isRunning = true;
-        this.isScheduled = false;
         clearTimeout(this.scheduleTimeout);
-        var jasmineRunner = child_process.spawn(process.execPath, [
+        var options = { stdio: 'inherit' };
+        var args = [
             path.join(__dirname, 'JasmineRunner.js'),
             '--name',
             this.name,
@@ -56,10 +54,8 @@ var Runner = (function (_super) {
             this.server.address.port.toString(),
             '--settings',
             this.settingsFile
-        ].map(quoteArg), {
-            stdio: 'inherit'
-        });
-        jasmineRunner.on('exit', function (code) {
+        ].map(quoteArg);
+        child_process.spawn(process.execPath, args, options).on('exit', function (code) {
             _this.isRunning = false;
             _this.emit('exit', code);
         });

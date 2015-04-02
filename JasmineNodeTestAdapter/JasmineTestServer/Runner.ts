@@ -20,43 +20,36 @@ class Runner extends events.EventEmitter {
     }
 
     private isRunning = false;
-    private isScheduled = false;
     private scheduleTimeout: NodeJS.Timer;
 
     schedule() {
         if (!this.isRunning) {
-            this.run();
+            clearTimeout(this.scheduleTimeout);
+            this.scheduleTimeout = setTimeout(() => this.run(), this.batchInterval);
         } else {
-            this.isScheduled = true;
             clearTimeout(this.scheduleTimeout);
             this.scheduleTimeout = setTimeout(() => this.schedule(), this.batchInterval);
         }
     }
 
     stop() {
-        this.isScheduled = false;
         clearTimeout(this.scheduleTimeout);
     }
 
     private run() {
         this.isRunning = true;
-        this.isScheduled = false;
         clearTimeout(this.scheduleTimeout);
 
-        var jasmineRunner = child_process.spawn(
-            process.execPath,
-            [
-                path.join(__dirname, 'JasmineRunner.js'),
-                '--name', this.name,
-                '--port', this.server.address.port.toString(),
-                '--settings', this.settingsFile
-            ].map(quoteArg),
-            {
-                stdio: 'inherit'
-            }
-            );
+        var options = { stdio: 'inherit' };
 
-        jasmineRunner.on('exit', code => {
+        var args = [
+            path.join(__dirname, 'JasmineRunner.js'),
+            '--name', this.name,
+            '--port', this.server.address.port.toString(),
+            '--settings', this.settingsFile
+        ].map(quoteArg);
+
+        child_process.spawn(process.execPath, args, options).on('exit', code => {
             this.isRunning = false;
             this.emit('exit', code);
         });
