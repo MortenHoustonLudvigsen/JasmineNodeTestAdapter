@@ -2,8 +2,8 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
     <Identity Id="JasmineNodeTestAdapter.25d980f5-bb63-4cae-8dd4-b165922e9c98" Version="x.x.x" Language="en-US" Publisher="Morten Houston Ludvigsen" />
-    <DisplayName>JasmineNodeTestAdapter</DisplayName>
-    <Description xml:space="preserve">JasmineNodeTestAdapter</Description>
+    <DisplayName>Jasmine Node Test Adapter</DisplayName>
+    <Description xml:space="preserve">A Visual Studio test explorer adapter for running Jasmine specs in Node.js</Description>
     <MoreInfo>https://github.com/MortenHoustonLudvigsen/JasmineNodeTestAdapter</MoreInfo>
     <License>LICENSE</License>
   </Metadata>
